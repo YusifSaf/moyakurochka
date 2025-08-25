@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <script src="p5.min.js"></script>
+        <script src="p5.sound.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <main>
+        </main>
+        <div class="btn-container">
+            <h2 class="h2">TRACKLIST</h2>
+            <button class="btn" onclick="playSong(0)">Baby Blue Movie</button>
+            <button class="btn" onclick="playSong(1)">Bubblegum</button>
+            <button class="btn" onclick="playSong(2)">Tejano Blue</button>
+            <button class="btn" onclick="playSong(3)">My House Is Not A Home</button>
+            <button class="btn" onclick="playSong(4)">Romantic Homicide</button>
+            <button class="btn" onclick="playSong(5)">Jigsaw Falling Into Place</button>
+            <button class="btn" onclick="playSong(6)">All I Need</button>
+            <button class="btn" onclick="playSong(7)">Mojo Pin</button>
+            <!-- <button class="btn" onclick="playSong(0)">Baby Blue Movie - Cigarettes After Sex</button>
+            <button class="btn" onclick="playSong(1)">Bubblegum - Cigarettes After Sex</button>
+            <button class="btn" onclick="playSong(2)">Tejano Blue - Cigarettes After Sex </button>
+            <button class="btn" onclick="playSong(3)">d4vd - My House Is Not A Home</button>
+            <button class="btn" onclick="playSong(4)">d4vd - Romantic Homicide</button>
+            <button class="btn" onclick="playSong(5)">Jigsaw Falling Into Place - Radiohead</button>
+            <button class="btn" onclick="playSong(6)">All I Need - Radiohead</button>
+            <button class="btn" onclick="playSong(7)">Mojo Pin - Jeff Buckley</button> -->
+        </div>
+        <div class="coming-soon-container" id="coming-soon">
+            <h2 class="coming-h2">COMING SOON</h2>
+            <!-- <button class="coming-btn">Metallica - Enter Sandman</button>
+            <button class="coming-btn">Nirvanna - Come as You Are</button>
+            <button class="coming-btn">Some other bullshit</button> -->
+            <button class="coming-btn">Tolko ne kusay za yayca</button>
+            <button class="coming-btn">Tolko ne lomay mne pinus</button>
+            <button class="coming-btn">Viliji moy POPKEK</button>
+        </div>
+        <div class="music-controls">
+            <button class="playback-btn" onclick="tooglePlayPause()" id="playPauseBtn">⏸️</button>
+            <div class="playback-container">
+                <div class="progress-bar-container">
+                    <input type="range" id="progress-bar" class="slider" min="0" max="100" value="0"
+                    onmousedown="startSeeking()"
+                    onmouseup="stopSeeking()"
+                    oninput="updateProgress(this.value)"> 
+                </div>
+            </div>
+        </div>
+        <div class="keyboard-controls" id="controls">
+            <div class="keyboard-controls-container">
+                <p>WASD to move</p>
+                <p>Q and E to go up/down</p>
+                <p>LMB/RMB/MMB to...also move</p>
+            </div>
+        </div>
+        <script src="sketch.js"></script>
+    </body>
+</html>
