@@ -15,13 +15,13 @@ let isPlaying = false;
 let currentSongNum = null;
 
 //To build image grid
-let tDistance = 1000;
-let wSize = 2560/5;
-let hSize = 1920/5;
-let rImage = []
-let imageIndences = [];
-let imageNum = 22;
-let totalImages = 26;
+// let tDistance = 1000;
+// let wSize = 2560/5;
+// let hSize = 1920/5;
+// let rImage = []
+// let imageIndences = [];
+// let imageNum = 22;
+// let totalImages = 26;
 
 //WASDMovement
 let speed = 3;
@@ -38,19 +38,20 @@ function preload(){
   songs[6] = loadSound("music/Radiohead - All I Need [wUL8NklXDsw].mp3");
   songs[7] = loadSound("music/Mojo Pin [Svo7LZbnUVw].mp3");
 
-  //Creating an array of image indexes
-  for (let i=0; i<totalImages; i++){
-    imageIndences.push(i);
-  }
+//   //Creating an array of image indexes
+//   for (let i=0; i<totalImages; i++){
+//     imageIndences.push(i);
+//   }
 
-  //Shuffling and trimming them
-  imageIndences = shuffle(imageIndences, true).slice(0, imageNum);
+//   //Shuffling and trimming them
+//   imageIndences = shuffle(imageIndences, true).slice(0, imageNum);
 
-  //loading images at random indexes in order
-  for(let i=0; i<imageNum; i++){  
-    let imgIndex = imageIndences[i];
-    rImage[i] = loadImage(`images/img (${imgIndex}).jpg`);
-  }
+//   //loading images at random indexes in order
+//   for(let i=0; i<imageNum; i++){  
+//     let imgIndex = imageIndences[i];
+//     rImage[i] = loadImage(`images/img (${imgIndex}).jpg`);
+//   }
+// }
 }
 
 function setup() {
@@ -105,44 +106,44 @@ function cubeGrid(amp) {
   xOff = 0;
 }
 
-function imageGrid(){
-  let rectImgIndex = 0;
+// function imageGrid(){
+//   let rectImgIndex = 0;
 
-  for (let i=0; i<360; i+=30){
-    push();
-    rotateX(i);
-    // line(0, 0, 0, 0, 0, 200);
-    pop();
+//   for (let i=0; i<360; i+=30){
+//     push();
+//     rotateX(i);
+//     // line(0, 0, 0, 0, 0, 200);
+//     pop();
 
-    push();
-    rotateX(i);
-    translate(0, tDistance, 0);
-    rotateX(atan2(1, 0))
-    texture(rImage[rectImgIndex]);
-    rectImgIndex++;
-    rect(0, 0, wSize, hSize);
+//     push();
+//     rotateX(i);
+//     translate(0, tDistance, 0);
+//     rotateX(atan2(1, 0))
+//     texture(rImage[rectImgIndex]);
+//     rectImgIndex++;
+//     rect(0, 0, wSize, hSize);
     
-    pop();
-  }
-  for(let l=0; l<360; l+=30){
+//     pop();
+//   }
+//   for(let l=0; l<360; l+=30){
     
-    push();
-    rotateY(l)
-    // line(0, 0, 0, 200, 0, 0);
-    pop();
+//     push();
+//     rotateY(l)
+//     // line(0, 0, 0, 200, 0, 0);
+//     pop();
     
-    push();
-    rotateY(l);
-    translate(0, 0, tDistance)
-    if (l != 0 && l != 180){
-      texture(rImage[rectImgIndex]);
-      rectImgIndex++
-      rect(0, 0, wSize, hSize)
-    }
-    //so that we the rects don't overlap
-    pop();
-  }
-}
+//     push();
+//     rotateY(l);
+//     translate(0, 0, tDistance)
+//     if (l != 0 && l != 180){
+//       texture(rImage[rectImgIndex]);
+//       rectImgIndex++
+//       rect(0, 0, wSize, hSize)
+//     }
+//     //so that we the rects don't overlap
+//     pop();
+//   }
+// }
 
 function wasdMove(){
   cam.move(
@@ -249,7 +250,7 @@ function draw() {
 
   //Show UI and Images on music play
   if(amp>0){
-    imageGrid();
+    // imageGrid();
     hideUI();
   }
   if(amp==0){
@@ -264,5 +265,4 @@ function draw() {
 // 1. Tempo is the inc amount for the zOff parameter
 // 2. Volume as the box height or amplitudeCoeff (+)
 // 3. Camera go down with the box and come closer when it goes down
-
 
