@@ -31,9 +31,9 @@ let progressBar = document.getElementById('progress-bar');
 function preload(){
   songs[0] = loadSound("music/Baby Blue Movie - Cigarettes After Sex [BeAzmDCWUzI].mp3");
   songs[1] = loadSound("music/Bubblegum - Cigarettes After Sex [Y4lU3EdvnUU].mp3");
-  songs[2] = loadSound("music/Tejano Blue - Cigarettes After Sex [--JuMkludKM].mp3");
-  songs[3] = loadSound("music/d4vd - My House Is Not A Home [B4UdAJxAoiw].mp3");
-  songs[4] = loadSound("music/d4vd - Romantic Homicide [eKL3TceSxvk].mp3");
+  songs[2] = loadSound("music/JEREMIAS-Meer-Official-Video.m4a");
+  songs[3] = loadSound("music/Where d It Go Wrong_ - d4vd.m4a");
+  songs[4] = loadSound("music/Romantic Homicide - d4vd.m4a");
   songs[5] = loadSound("music/Jigsaw Falling Into Place by. Radiohead [TR2HPSjcJ7I].mp3");
   songs[6] = loadSound("music/Radiohead - All I Need [wUL8NklXDsw].mp3");
   songs[7] = loadSound("music/Mojo Pin [Svo7LZbnUVw].mp3");
